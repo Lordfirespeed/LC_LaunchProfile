@@ -13,6 +13,13 @@
 # Joe Clack licenses this file to you under the GPL-3.0-OR-LATER license.
 # -----------------------------------------------------------------------
 
+determine-current-screen-resolution() {
+  local resolution=$(xrandr --current | grep '*' | uniq | awk '{print $1}')
+  local x_res=$(echo "${resolution}" | cut -d 'x' -f1)
+  local y_res=$(echo "${resolution}" | cut -d 'x' -f2)
+  declare -gA SCREEN_RESOLUTION=( [xAxis]=x_res [yAxis]=y_res )
+}
+
 # Unless you know what you're doing, leave these variables alone.
 proton-launch-pre-init() {
   STEAM_HOME="${HOME}/.steam/steam"
@@ -29,7 +36,7 @@ proton-launch-user-specific-init() {
   # installed in here, if different from the default home directory SteamLibrary:
   STEAM_GAME_LIBRARY="${STEAM_HOME}"
   # Specify launch config
-  declare -A CONFIG=( [windowCount]=1 )
+  declare -gA CONFIG=( [windowCount]=1 )
 }
 
 # Unless you know what you're doing, leave these variables alone.
