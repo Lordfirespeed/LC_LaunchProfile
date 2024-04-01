@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# -----------------------------------------------------------------------
+# Copyright © 2024 Ricky Davis
+#
+# All rights reserved.
+#
+# Ricky Davis expressly permits Joe Clack to 'do as they please with'
+# the contents of this repository.
+# -----------------------------------------------------------------------
+# Copyright © 2024 Joe Clack
+#
+# Joe Clack licenses this file to you under the GPL-3.0-OR-LATER license.
+# -----------------------------------------------------------------------
+
 # Unless you know what you're doing, leave these variables alone.
 proton-launch-pre-init() {
   STEAM_HOME="${HOME}/.steam/steam"
