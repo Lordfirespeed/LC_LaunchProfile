@@ -6,7 +6,7 @@
 # All rights reserved.
 #
 # Ricky Davis expressly permits Joe Clack to 'do as they please with'
-# the contents of this repository.
+# the contents of the https://github.com/ricky-davis/LC_LaunchProfile repository.
 # -----------------------------------------------------------------------
 # Copyright © 2024 Joe Clack
 #
